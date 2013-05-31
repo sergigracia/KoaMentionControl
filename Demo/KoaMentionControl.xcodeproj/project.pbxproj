@@ -1,0 +1,323 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		555B0D7416FA238300D9BFCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555B0D7316FA238300D9BFCB /* UIKit.framework */; };
+		555B0D7616FA238300D9BFCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555B0D7516FA238300D9BFCB /* Foundation.framework */; };
+		555B0D7816FA238300D9BFCB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555B0D7716FA238300D9BFCB /* CoreGraphics.framework */; };
+		55F6F68B1758B7FF00E18142 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F6F6851758B7FF00E18142 /* Default-568h@2x.png */; };
+		55F6F68C1758B7FF00E18142 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F6F6861758B7FF00E18142 /* Default.png */; };
+		55F6F68D1758B7FF00E18142 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F6F6871758B7FF00E18142 /* Default@2x.png */; };
+		55F6F68E1758B7FF00E18142 /* KoaMentionControl-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55F6F6881758B7FF00E18142 /* KoaMentionControl-Info.plist */; };
+		55F6F68F1758B7FF00E18142 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F6F68A1758B7FF00E18142 /* main.m */; };
+		55F6F6A01758B84C00E18142 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F6F6921758B84C00E18142 /* AppDelegate.m */; };
+		55F6F6A11758B84C00E18142 /* DroidSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55F6F6931758B84C00E18142 /* DroidSans-Bold.ttf */; };
+		55F6F6A21758B84C00E18142 /* DroidSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55F6F6941758B84C00E18142 /* DroidSans.ttf */; };
+		55F6F6A31758B84C00E18142 /* KoaMentionControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F6F6961758B84C00E18142 /* KoaMentionControl.m */; };
+		55F6F6A41758B84C00E18142 /* KoaMentionControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55F6F6971758B84C00E18142 /* KoaMentionControl.xib */; };
+		55F6F6A51758B84C00E18142 /* KoaMentionControlItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F6F6991758B84C00E18142 /* KoaMentionControlItemCell.m */; };
+		55F6F6A61758B84C00E18142 /* KoaMentionControlItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55F6F69A1758B84C00E18142 /* KoaMentionControlItemCell.xib */; };
+		55F6F6A71758B84C00E18142 /* shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F6F69B1758B84C00E18142 /* shadow.png */; };
+		55F6F6A81758B84C00E18142 /* shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F6F69C1758B84C00E18142 /* shadow@2x.png */; };
+		55F6F6A91758B84C00E18142 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F6F69E1758B84C00E18142 /* ViewController.m */; };
+		55F6F6AA1758B84C00E18142 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55F6F69F1758B84C00E18142 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		555B0D7016FA238300D9BFCB /* KoaMentionControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoaMentionControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		555B0D7316FA238300D9BFCB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		555B0D7516FA238300D9BFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		555B0D7716FA238300D9BFCB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		55F6F6851758B7FF00E18142 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "KoaMentionControl/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		55F6F6861758B7FF00E18142 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = KoaMentionControl/Default.png; sourceTree = SOURCE_ROOT; };
+		55F6F6871758B7FF00E18142 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "KoaMentionControl/Default@2x.png"; sourceTree = SOURCE_ROOT; };
+		55F6F6881758B7FF00E18142 /* KoaMentionControl-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "KoaMentionControl-Info.plist"; path = "KoaMentionControl/KoaMentionControl-Info.plist"; sourceTree = SOURCE_ROOT; };
+		55F6F6891758B7FF00E18142 /* KoaMentionControl-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "KoaMentionControl-Prefix.pch"; path = "KoaMentionControl/KoaMentionControl-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		55F6F68A1758B7FF00E18142 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = KoaMentionControl/main.m; sourceTree = SOURCE_ROOT; };
+		55F6F6911758B84C00E18142 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = KoaMentionControl/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		55F6F6921758B84C00E18142 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = KoaMentionControl/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		55F6F6931758B84C00E18142 /* DroidSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DroidSans-Bold.ttf"; path = "KoaMentionControl/DroidSans-Bold.ttf"; sourceTree = SOURCE_ROOT; };
+		55F6F6941758B84C00E18142 /* DroidSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = DroidSans.ttf; path = KoaMentionControl/DroidSans.ttf; sourceTree = SOURCE_ROOT; };
+		55F6F6951758B84C00E18142 /* KoaMentionControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KoaMentionControl.h; path = KoaMentionControl/KoaMentionControl.h; sourceTree = SOURCE_ROOT; };
+		55F6F6961758B84C00E18142 /* KoaMentionControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KoaMentionControl.m; path = KoaMentionControl/KoaMentionControl.m; sourceTree = SOURCE_ROOT; };
+		55F6F6971758B84C00E18142 /* KoaMentionControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KoaMentionControl.xib; path = KoaMentionControl/KoaMentionControl.xib; sourceTree = SOURCE_ROOT; };
+		55F6F6981758B84C00E18142 /* KoaMentionControlItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KoaMentionControlItemCell.h; path = KoaMentionControl/KoaMentionControlItemCell.h; sourceTree = SOURCE_ROOT; };
+		55F6F6991758B84C00E18142 /* KoaMentionControlItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KoaMentionControlItemCell.m; path = KoaMentionControl/KoaMentionControlItemCell.m; sourceTree = SOURCE_ROOT; };
+		55F6F69A1758B84C00E18142 /* KoaMentionControlItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KoaMentionControlItemCell.xib; path = KoaMentionControl/KoaMentionControlItemCell.xib; sourceTree = SOURCE_ROOT; };
+		55F6F69B1758B84C00E18142 /* shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shadow.png; path = KoaMentionControl/shadow.png; sourceTree = SOURCE_ROOT; };
+		55F6F69C1758B84C00E18142 /* shadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "shadow@2x.png"; path = "KoaMentionControl/shadow@2x.png"; sourceTree = SOURCE_ROOT; };
+		55F6F69D1758B84C00E18142 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = KoaMentionControl/ViewController.h; sourceTree = SOURCE_ROOT; };
+		55F6F69E1758B84C00E18142 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = KoaMentionControl/ViewController.m; sourceTree = SOURCE_ROOT; };
+		55F6F69F1758B84C00E18142 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ViewController.xib; path = KoaMentionControl/ViewController.xib; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		555B0D6D16FA238300D9BFCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				555B0D7416FA238300D9BFCB /* UIKit.framework in Frameworks */,
+				555B0D7616FA238300D9BFCB /* Foundation.framework in Frameworks */,
+				555B0D7816FA238300D9BFCB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		555B0D6716FA238300D9BFCB = {
+			isa = PBXGroup;
+			children = (
+				555B0D7916FA238300D9BFCB /* KoaMentionControl */,
+				555B0D7A16FA238300D9BFCB /* Supporting Files */,
+				555B0D7216FA238300D9BFCB /* Frameworks */,
+				555B0D7116FA238300D9BFCB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		555B0D7116FA238300D9BFCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				555B0D7016FA238300D9BFCB /* KoaMentionControl.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		555B0D7216FA238300D9BFCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				555B0D7316FA238300D9BFCB /* UIKit.framework */,
+				555B0D7516FA238300D9BFCB /* Foundation.framework */,
+				555B0D7716FA238300D9BFCB /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		555B0D7916FA238300D9BFCB /* KoaMentionControl */ = {
+			isa = PBXGroup;
+			children = (
+				55F6F6911758B84C00E18142 /* AppDelegate.h */,
+				55F6F6921758B84C00E18142 /* AppDelegate.m */,
+				55F6F6951758B84C00E18142 /* KoaMentionControl.h */,
+				55F6F6961758B84C00E18142 /* KoaMentionControl.m */,
+				55F6F6971758B84C00E18142 /* KoaMentionControl.xib */,
+				55F6F6981758B84C00E18142 /* KoaMentionControlItemCell.h */,
+				55F6F6991758B84C00E18142 /* KoaMentionControlItemCell.m */,
+				55F6F69A1758B84C00E18142 /* KoaMentionControlItemCell.xib */,
+				55F6F69D1758B84C00E18142 /* ViewController.h */,
+				55F6F69E1758B84C00E18142 /* ViewController.m */,
+				55F6F69F1758B84C00E18142 /* ViewController.xib */,
+				55F6F6931758B84C00E18142 /* DroidSans-Bold.ttf */,
+				55F6F6941758B84C00E18142 /* DroidSans.ttf */,
+				55F6F69B1758B84C00E18142 /* shadow.png */,
+				55F6F69C1758B84C00E18142 /* shadow@2x.png */,
+			);
+			name = KoaMentionControl;
+			path = KoaMentionControl;
+			sourceTree = "<group>";
+		};
+		555B0D7A16FA238300D9BFCB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55F6F6851758B7FF00E18142 /* Default-568h@2x.png */,
+				55F6F6861758B7FF00E18142 /* Default.png */,
+				55F6F6871758B7FF00E18142 /* Default@2x.png */,
+				55F6F6881758B7FF00E18142 /* KoaMentionControl-Info.plist */,
+				55F6F6891758B7FF00E18142 /* KoaMentionControl-Prefix.pch */,
+				55F6F68A1758B7FF00E18142 /* main.m */,
+			);
+			name = "Supporting Files";
+			path = KoaMentionControl;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		555B0D6F16FA238300D9BFCB /* KoaMentionControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 555B0D9316FA238400D9BFCB /* Build configuration list for PBXNativeTarget "KoaMentionControl" */;
+			buildPhases = (
+				555B0D6C16FA238300D9BFCB /* Sources */,
+				555B0D6D16FA238300D9BFCB /* Frameworks */,
+				555B0D6E16FA238300D9BFCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KoaMentionControl;
+			productName = KoaMentionControl;
+			productReference = 555B0D7016FA238300D9BFCB /* KoaMentionControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		555B0D6816FA238300D9BFCB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Sergi Gracia";
+			};
+			buildConfigurationList = 555B0D6B16FA238300D9BFCB /* Build configuration list for PBXProject "KoaMentionControl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 555B0D6716FA238300D9BFCB;
+			productRefGroup = 555B0D7116FA238300D9BFCB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				555B0D6F16FA238300D9BFCB /* KoaMentionControl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		555B0D6E16FA238300D9BFCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55F6F68B1758B7FF00E18142 /* Default-568h@2x.png in Resources */,
+				55F6F68C1758B7FF00E18142 /* Default.png in Resources */,
+				55F6F68D1758B7FF00E18142 /* Default@2x.png in Resources */,
+				55F6F68E1758B7FF00E18142 /* KoaMentionControl-Info.plist in Resources */,
+				55F6F6A11758B84C00E18142 /* DroidSans-Bold.ttf in Resources */,
+				55F6F6A21758B84C00E18142 /* DroidSans.ttf in Resources */,
+				55F6F6A41758B84C00E18142 /* KoaMentionControl.xib in Resources */,
+				55F6F6A61758B84C00E18142 /* KoaMentionControlItemCell.xib in Resources */,
+				55F6F6A71758B84C00E18142 /* shadow.png in Resources */,
+				55F6F6A81758B84C00E18142 /* shadow@2x.png in Resources */,
+				55F6F6AA1758B84C00E18142 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		555B0D6C16FA238300D9BFCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55F6F68F1758B7FF00E18142 /* main.m in Sources */,
+				55F6F6A01758B84C00E18142 /* AppDelegate.m in Sources */,
+				55F6F6A31758B84C00E18142 /* KoaMentionControl.m in Sources */,
+				55F6F6A51758B84C00E18142 /* KoaMentionControlItemCell.m in Sources */,
+				55F6F6A91758B84C00E18142 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		555B0D9116FA238400D9BFCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		555B0D9216FA238400D9BFCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		555B0D9416FA238400D9BFCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KoaMentionControl/KoaMentionControl-Prefix.pch";
+				INFOPLIST_FILE = "KoaMentionControl/KoaMentionControl-Info.plist";
+				PRODUCT_NAME = KoaMentionControl;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		555B0D9516FA238400D9BFCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KoaMentionControl/KoaMentionControl-Prefix.pch";
+				INFOPLIST_FILE = "KoaMentionControl/KoaMentionControl-Info.plist";
+				PRODUCT_NAME = KoaMentionControl;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		555B0D6B16FA238300D9BFCB /* Build configuration list for PBXProject "KoaMentionControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				555B0D9116FA238400D9BFCB /* Debug */,
+				555B0D9216FA238400D9BFCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		555B0D9316FA238400D9BFCB /* Build configuration list for PBXNativeTarget "KoaMentionControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				555B0D9416FA238400D9BFCB /* Debug */,
+				555B0D9516FA238400D9BFCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 555B0D6816FA238300D9BFCB /* Project object */;
+}
