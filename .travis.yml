@@ -1,0 +1,10 @@
+language: objective-c
+
+before_install:
+  - brew update
+  - brew install xctool --HEAD
+
+notifications:
+  email: false
+
+script: xctool ONLY_ACTIVE_ARCH=NO -workspace Demo/KoaMentionControl.xcworkspace -sdk iphonesimulator -scheme KoaMentionControl build
