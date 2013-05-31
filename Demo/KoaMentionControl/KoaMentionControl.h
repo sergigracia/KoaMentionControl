@@ -8,13 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "KoaMentionControlItemCell.h"
-
-typedef struct
-{
-    //Using __unsafe_unretained because ARC doesn't support structs
-    __unsafe_unretained NSString *description;
-    __unsafe_unretained NSString *image;
-} item;
+#import "KoaMentionControlItemObject.h"
 
 @interface KoaMentionControl : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextViewDelegate>
 
@@ -22,12 +16,12 @@ typedef struct
 @property (nonatomic, weak) IBOutlet UITableView *mentionTableView;
 @property (nonatomic, weak) IBOutlet KoaMentionControlItemCell *itemCell;
 
-//Setters
 - (void)setMentionTextView:(UITextView *)textView;
 - (void)setMentionParentView:(UIView *)parentView;
+- (void)setMentionParentViewController:(UIViewController *)parentViewController;
 - (void)setMentionItemsDictionary:(NSMutableDictionary *)itemsDictionary;
 
-//Textview delegate methods
+//Textview delegate
 - (void)textViewDidChangeSelection:(UITextView *)textView;
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text;
 - (void)textViewDidChange:(UITextView *)textView;

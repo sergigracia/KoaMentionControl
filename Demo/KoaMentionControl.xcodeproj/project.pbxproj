@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550CC2331758E0240083CE97 /* KoaMentionControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 550CC22C1758E0240083CE97 /* KoaMentionControl.m */; };
+		550CC2341758E0240083CE97 /* KoaMentionControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 550CC22D1758E0240083CE97 /* KoaMentionControl.xib */; };
+		550CC2351758E0240083CE97 /* KoaMentionControlItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 550CC22F1758E0240083CE97 /* KoaMentionControlItemCell.m */; };
+		550CC2361758E0240083CE97 /* KoaMentionControlItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 550CC2301758E0240083CE97 /* KoaMentionControlItemCell.xib */; };
+		550CC2371758E0240083CE97 /* KoaMentionControlItemObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 550CC2321758E0240083CE97 /* KoaMentionControlItemObject.m */; };
 		555B0D7416FA238300D9BFCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555B0D7316FA238300D9BFCB /* UIKit.framework */; };
 		555B0D7616FA238300D9BFCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555B0D7516FA238300D9BFCB /* Foundation.framework */; };
 		555B0D7816FA238300D9BFCB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555B0D7716FA238300D9BFCB /* CoreGraphics.framework */; };
@@ -18,17 +23,22 @@
 		55F6F6A01758B84C00E18142 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F6F6921758B84C00E18142 /* AppDelegate.m */; };
 		55F6F6A11758B84C00E18142 /* DroidSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55F6F6931758B84C00E18142 /* DroidSans-Bold.ttf */; };
 		55F6F6A21758B84C00E18142 /* DroidSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55F6F6941758B84C00E18142 /* DroidSans.ttf */; };
-		55F6F6A31758B84C00E18142 /* KoaMentionControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F6F6961758B84C00E18142 /* KoaMentionControl.m */; };
-		55F6F6A41758B84C00E18142 /* KoaMentionControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55F6F6971758B84C00E18142 /* KoaMentionControl.xib */; };
-		55F6F6A51758B84C00E18142 /* KoaMentionControlItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F6F6991758B84C00E18142 /* KoaMentionControlItemCell.m */; };
-		55F6F6A61758B84C00E18142 /* KoaMentionControlItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55F6F69A1758B84C00E18142 /* KoaMentionControlItemCell.xib */; };
 		55F6F6A71758B84C00E18142 /* shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F6F69B1758B84C00E18142 /* shadow.png */; };
 		55F6F6A81758B84C00E18142 /* shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F6F69C1758B84C00E18142 /* shadow@2x.png */; };
 		55F6F6A91758B84C00E18142 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F6F69E1758B84C00E18142 /* ViewController.m */; };
 		55F6F6AA1758B84C00E18142 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55F6F69F1758B84C00E18142 /* ViewController.xib */; };
+		A5BFC2B556604889A826C792 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0FC14CBEEF349EBA48FAA47 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		550CC22B1758E0240083CE97 /* KoaMentionControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KoaMentionControl.h; sourceTree = "<group>"; };
+		550CC22C1758E0240083CE97 /* KoaMentionControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KoaMentionControl.m; sourceTree = "<group>"; };
+		550CC22D1758E0240083CE97 /* KoaMentionControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KoaMentionControl.xib; sourceTree = "<group>"; };
+		550CC22E1758E0240083CE97 /* KoaMentionControlItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KoaMentionControlItemCell.h; sourceTree = "<group>"; };
+		550CC22F1758E0240083CE97 /* KoaMentionControlItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KoaMentionControlItemCell.m; sourceTree = "<group>"; };
+		550CC2301758E0240083CE97 /* KoaMentionControlItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KoaMentionControlItemCell.xib; sourceTree = "<group>"; };
+		550CC2311758E0240083CE97 /* KoaMentionControlItemObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KoaMentionControlItemObject.h; sourceTree = "<group>"; };
+		550CC2321758E0240083CE97 /* KoaMentionControlItemObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KoaMentionControlItemObject.m; sourceTree = "<group>"; };
 		555B0D7016FA238300D9BFCB /* KoaMentionControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoaMentionControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		555B0D7316FA238300D9BFCB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		555B0D7516FA238300D9BFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -43,17 +53,13 @@
 		55F6F6921758B84C00E18142 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = KoaMentionControl/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		55F6F6931758B84C00E18142 /* DroidSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DroidSans-Bold.ttf"; path = "KoaMentionControl/DroidSans-Bold.ttf"; sourceTree = SOURCE_ROOT; };
 		55F6F6941758B84C00E18142 /* DroidSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = DroidSans.ttf; path = KoaMentionControl/DroidSans.ttf; sourceTree = SOURCE_ROOT; };
-		55F6F6951758B84C00E18142 /* KoaMentionControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KoaMentionControl.h; path = KoaMentionControl/KoaMentionControl.h; sourceTree = SOURCE_ROOT; };
-		55F6F6961758B84C00E18142 /* KoaMentionControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KoaMentionControl.m; path = KoaMentionControl/KoaMentionControl.m; sourceTree = SOURCE_ROOT; };
-		55F6F6971758B84C00E18142 /* KoaMentionControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KoaMentionControl.xib; path = KoaMentionControl/KoaMentionControl.xib; sourceTree = SOURCE_ROOT; };
-		55F6F6981758B84C00E18142 /* KoaMentionControlItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KoaMentionControlItemCell.h; path = KoaMentionControl/KoaMentionControlItemCell.h; sourceTree = SOURCE_ROOT; };
-		55F6F6991758B84C00E18142 /* KoaMentionControlItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KoaMentionControlItemCell.m; path = KoaMentionControl/KoaMentionControlItemCell.m; sourceTree = SOURCE_ROOT; };
-		55F6F69A1758B84C00E18142 /* KoaMentionControlItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KoaMentionControlItemCell.xib; path = KoaMentionControl/KoaMentionControlItemCell.xib; sourceTree = SOURCE_ROOT; };
 		55F6F69B1758B84C00E18142 /* shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shadow.png; path = KoaMentionControl/shadow.png; sourceTree = SOURCE_ROOT; };
 		55F6F69C1758B84C00E18142 /* shadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "shadow@2x.png"; path = "KoaMentionControl/shadow@2x.png"; sourceTree = SOURCE_ROOT; };
 		55F6F69D1758B84C00E18142 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = KoaMentionControl/ViewController.h; sourceTree = SOURCE_ROOT; };
 		55F6F69E1758B84C00E18142 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = KoaMentionControl/ViewController.m; sourceTree = SOURCE_ROOT; };
 		55F6F69F1758B84C00E18142 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ViewController.xib; path = KoaMentionControl/ViewController.xib; sourceTree = SOURCE_ROOT; };
+		C0FC14CBEEF349EBA48FAA47 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFDCCCD8AB494238AC30EAC2 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,19 +70,31 @@
 				555B0D7416FA238300D9BFCB /* UIKit.framework in Frameworks */,
 				555B0D7616FA238300D9BFCB /* Foundation.framework in Frameworks */,
 				555B0D7816FA238300D9BFCB /* CoreGraphics.framework in Frameworks */,
+				A5BFC2B556604889A826C792 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		550CC22A1758E00E0083CE97 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				55F6F69B1758B84C00E18142 /* shadow.png */,
+				55F6F69C1758B84C00E18142 /* shadow@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		555B0D6716FA238300D9BFCB = {
 			isa = PBXGroup;
 			children = (
 				555B0D7916FA238300D9BFCB /* KoaMentionControl */,
+				550CC22A1758E00E0083CE97 /* Resources */,
 				555B0D7A16FA238300D9BFCB /* Supporting Files */,
 				555B0D7216FA238300D9BFCB /* Frameworks */,
 				555B0D7116FA238300D9BFCB /* Products */,
+				FFDCCCD8AB494238AC30EAC2 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +112,7 @@
 				555B0D7316FA238300D9BFCB /* UIKit.framework */,
 				555B0D7516FA238300D9BFCB /* Foundation.framework */,
 				555B0D7716FA238300D9BFCB /* CoreGraphics.framework */,
+				C0FC14CBEEF349EBA48FAA47 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -103,21 +122,20 @@
 			children = (
 				55F6F6911758B84C00E18142 /* AppDelegate.h */,
 				55F6F6921758B84C00E18142 /* AppDelegate.m */,
-				55F6F6951758B84C00E18142 /* KoaMentionControl.h */,
-				55F6F6961758B84C00E18142 /* KoaMentionControl.m */,
-				55F6F6971758B84C00E18142 /* KoaMentionControl.xib */,
-				55F6F6981758B84C00E18142 /* KoaMentionControlItemCell.h */,
-				55F6F6991758B84C00E18142 /* KoaMentionControlItemCell.m */,
-				55F6F69A1758B84C00E18142 /* KoaMentionControlItemCell.xib */,
 				55F6F69D1758B84C00E18142 /* ViewController.h */,
 				55F6F69E1758B84C00E18142 /* ViewController.m */,
 				55F6F69F1758B84C00E18142 /* ViewController.xib */,
+				550CC22B1758E0240083CE97 /* KoaMentionControl.h */,
+				550CC22C1758E0240083CE97 /* KoaMentionControl.m */,
+				550CC22D1758E0240083CE97 /* KoaMentionControl.xib */,
+				550CC22E1758E0240083CE97 /* KoaMentionControlItemCell.h */,
+				550CC22F1758E0240083CE97 /* KoaMentionControlItemCell.m */,
+				550CC2301758E0240083CE97 /* KoaMentionControlItemCell.xib */,
+				550CC2311758E0240083CE97 /* KoaMentionControlItemObject.h */,
+				550CC2321758E0240083CE97 /* KoaMentionControlItemObject.m */,
 				55F6F6931758B84C00E18142 /* DroidSans-Bold.ttf */,
 				55F6F6941758B84C00E18142 /* DroidSans.ttf */,
-				55F6F69B1758B84C00E18142 /* shadow.png */,
-				55F6F69C1758B84C00E18142 /* shadow@2x.png */,
 			);
-			name = KoaMentionControl;
 			path = KoaMentionControl;
 			sourceTree = "<group>";
 		};
@@ -142,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 555B0D9316FA238400D9BFCB /* Build configuration list for PBXNativeTarget "KoaMentionControl" */;
 			buildPhases = (
+				5FD3C5955D624680AD096C16 /* Check Pods Manifest.lock */,
 				555B0D6C16FA238300D9BFCB /* Sources */,
 				555B0D6D16FA238300D9BFCB /* Frameworks */,
 				555B0D6E16FA238300D9BFCB /* Resources */,
+				5E9ECDC2659440E5951C8ABD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,15 +212,46 @@
 				55F6F68E1758B7FF00E18142 /* KoaMentionControl-Info.plist in Resources */,
 				55F6F6A11758B84C00E18142 /* DroidSans-Bold.ttf in Resources */,
 				55F6F6A21758B84C00E18142 /* DroidSans.ttf in Resources */,
-				55F6F6A41758B84C00E18142 /* KoaMentionControl.xib in Resources */,
-				55F6F6A61758B84C00E18142 /* KoaMentionControlItemCell.xib in Resources */,
 				55F6F6A71758B84C00E18142 /* shadow.png in Resources */,
 				55F6F6A81758B84C00E18142 /* shadow@2x.png in Resources */,
 				55F6F6AA1758B84C00E18142 /* ViewController.xib in Resources */,
+				550CC2341758E0240083CE97 /* KoaMentionControl.xib in Resources */,
+				550CC2361758E0240083CE97 /* KoaMentionControlItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E9ECDC2659440E5951C8ABD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+		5FD3C5955D624680AD096C16 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		555B0D6C16FA238300D9BFCB /* Sources */ = {
@@ -209,9 +260,10 @@
 			files = (
 				55F6F68F1758B7FF00E18142 /* main.m in Sources */,
 				55F6F6A01758B84C00E18142 /* AppDelegate.m in Sources */,
-				55F6F6A31758B84C00E18142 /* KoaMentionControl.m in Sources */,
-				55F6F6A51758B84C00E18142 /* KoaMentionControlItemCell.m in Sources */,
 				55F6F6A91758B84C00E18142 /* ViewController.m in Sources */,
+				550CC2331758E0240083CE97 /* KoaMentionControl.m in Sources */,
+				550CC2351758E0240083CE97 /* KoaMentionControlItemCell.m in Sources */,
+				550CC2371758E0240083CE97 /* KoaMentionControlItemObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +328,7 @@
 		};
 		555B0D9416FA238400D9BFCB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFDCCCD8AB494238AC30EAC2 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KoaMentionControl/KoaMentionControl-Prefix.pch";
@@ -287,6 +340,7 @@
 		};
 		555B0D9516FA238400D9BFCB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFDCCCD8AB494238AC30EAC2 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KoaMentionControl/KoaMentionControl-Prefix.pch";

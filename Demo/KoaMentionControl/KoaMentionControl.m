@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) UITextView *textView;
 @property (nonatomic, strong) UIView *parentView;
+@property (nonatomic, strong) UIViewController *parentViewController;
 @property (nonatomic, strong) NSMutableDictionary *itemsDictionary;
 @property (nonatomic, strong) NSMutableArray *itemsKeysFiltered;
 @property (nonatomic, strong) NSMutableArray *itemsKeysFilteredOld;
@@ -25,6 +26,8 @@
 @property (nonatomic) BOOL isMentionTableVisible;
 @property (nonatomic) BOOL isKeyboardVisible;
 
+@property (nonatomic) NSOperationQueue *orderQueue;
+
 @end
 
 @implementation KoaMentionControl
@@ -32,6 +35,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //Init queue
+    self.orderQueue = [[NSOperationQueue alloc] init];
+    [self.orderQueue setMaxConcurrentOperationCount:1];
     
     [self.shadowView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"shadow.png"]]];
     
@@ -62,13 +69,18 @@
     self.parentView = parentView;
 }
 
+- (void)setMentionParentViewController:(UIViewController *)parentViewController
+{
+    self.parentViewController = parentViewController;
+}
+
 - (void)setMentionItemsDictionary:(NSMutableDictionary *)itemsDictionary
 {
     self.itemsDictionary = [NSMutableDictionary dictionaryWithDictionary:itemsDictionary];
     self.itemsKeysFiltered = [NSMutableArray arrayWithArray:itemsDictionary.allKeys];
 }
 
-#pragma mark - TextView delegate methods
+#pragma mark - TextView
 
 - (void)textViewDidChangeSelection:(UITextView *)textView
 {
@@ -227,12 +239,20 @@
 
 - (void)showTable
 {
+    if ([self.parentViewController respondsToSelector:@selector(showMenu)]) {
+        [self.parentViewController performSelector:@selector(showMenu)];
+    }
+    
     [self setIsMentionTableVisible:YES];
     [self resizeTextView];
 }
 
 - (void)hideTable
 {
+    if ([self.parentViewController respondsToSelector:@selector(hideMenu)]) {
+        [self.parentViewController performSelector:@selector(hideMenu)];
+    }
+    
     [self setIsMentionTableVisible:NO];
     [self resizeTextView];
 }
@@ -274,13 +294,14 @@
     
     if ([self.itemsDictionary objectForKey:[self.itemsKeysFiltered objectAtIndex:indexPath.row]]) {
         
-        item oneItem;
-        NSValue *oneValue = [self.itemsDictionary objectForKey:[self.itemsKeysFiltered objectAtIndex:indexPath.row]];
-        [oneValue getValue:&oneItem];
-        [cell.description setText:oneItem.description];
+        KoaMentionControlItemObject *oneItem = (KoaMentionControlItemObject*)[self.itemsDictionary objectForKey:[self.itemsKeysFiltered objectAtIndex:indexPath.row]];
+        
+        if (oneItem.description) {
+            [cell.description setText:oneItem.description];            
+        }
         
         if (![oneItem.image isEqualToString:@""]) {
-            //TODO...
+            [cell setImageCell:oneItem.image];
             
         }else{
             [cell.image setHidden:YES];
@@ -324,6 +345,13 @@
 
 - (void)filterContentForSearchText:(NSString*)searchText
 {
+    [self.orderQueue addOperationWithBlock:^{
+        [self blockFilterContentForSearchText:searchText];
+    }];
+}
+
+- (void)blockFilterContentForSearchText:(NSString*)searchText
+{
     //NSLog(@"Search Text: %@", searchText);
     
     if (self.itemsKeysFiltered.count > 0) {
@@ -348,9 +376,7 @@
             }
             
             //Compare full name
-            item oneItem;
-            NSValue *structValue = [self.itemsDictionary objectForKey:oneValue];
-            [structValue getValue:&oneItem];
+            KoaMentionControlItemObject *oneItem = (KoaMentionControlItemObject*)[self.itemsDictionary objectForKey:oneValue];
             
             NSString *fullname = [NSString stringWithString:oneItem.description];
             NSString *searchTextCleaned = [searchText stringByReplacingOccurrencesOfString:@"@" withString:@""];
@@ -362,44 +388,39 @@
     }
     
     [self orderFilteredArrayWithSearchText:searchText];
-    
-    [self.mentionTableView reloadData];
 }
 
 - (void)orderFilteredArrayWithSearchText:(NSString *)searchText
 {
+    //NSLog(@"Start %@", searchText);
     NSMutableArray *descriptionsArray = [[NSMutableArray alloc] init];
     NSMutableArray *finalKeysArray = [[NSMutableArray alloc] init];
+    NSMutableArray *itemsKeysFilteredLocal = [NSMutableArray arrayWithArray:self.itemsKeysFiltered];
     
     //Get descriptions of filtered objects
-    for (NSString *oneValue in self.itemsKeysFiltered) {
+    for (NSString *oneValue in itemsKeysFilteredLocal) {
         
-        item oneItem;
-        NSValue *structValue = [self.itemsDictionary objectForKey:oneValue];
-        [structValue getValue:&oneItem];
-        
+        KoaMentionControlItemObject *oneItem = (KoaMentionControlItemObject*)[self.itemsDictionary objectForKey:oneValue];
         [descriptionsArray addObject:oneItem.description];
     }
     
     //Order descriptions
     [descriptionsArray sortUsingSelector:@selector(caseInsensitiveCompare:)];
     
-    if ([searchText isEqualToString:@"@"]) {
+    if ([searchText isEqualToString:@"@"] && [self.itemsDictionary objectForKey:@"@all"]) {
         [finalKeysArray addObject:@"@all"];
     }
     
     //Reorder keys with ordered descriptions
     for (NSString *oneDescription in descriptionsArray) {
-        for (NSString *oneValue in self.itemsKeysFiltered) {
-         
+        for (NSString *oneValue in itemsKeysFilteredLocal) {
+            //NSLog(@"Value: %@", oneValue);
             //Jump '@all' value
             if ([searchText isEqualToString:@"@"] && [oneValue isEqualToString:@"@all"]) {
                 continue;
             }
-            
-            item oneItem;
-            NSValue *structValue = [self.itemsDictionary objectForKey:oneValue];
-            [structValue getValue:&oneItem];
+            //[NSThread sleepForTimeInterval:0.01];
+            KoaMentionControlItemObject *oneItem = (KoaMentionControlItemObject*)[self.itemsDictionary objectForKey:oneValue];
             
             if ([oneItem.description isEqualToString:oneDescription]) {
                 [finalKeysArray addObject:oneValue];
@@ -410,7 +431,7 @@
     
     //No results?
     if (finalKeysArray.count == 0) {
-        NSString *messageNotFound = @"No matches found. Did you mean:";
+        NSString *messageNotFound = NSLocalizedString(@"No matches found. Did you mean:", nil);
         [finalKeysArray addObject: messageNotFound];
         for (NSString *oneValue in self.itemsKeysFilteredOld) {
             if (![oneValue isEqualToString:messageNotFound]) {
@@ -420,6 +441,11 @@
     }
     
     self.itemsKeysFiltered = [NSMutableArray arrayWithArray:finalKeysArray];
+    
+    //It's necessary to refresh the ui from mainThread
+    [self.mentionTableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+    
+    //NSLog(@"End %@", searchText);
 }
 
 #pragma mark - Keyboard

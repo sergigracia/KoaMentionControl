@@ -18,5 +18,6 @@
 
 - (void)applyFont;
 - (void)applyFontBold;
+- (void)setImageCell:(NSString*)urlImage;
 
 @end

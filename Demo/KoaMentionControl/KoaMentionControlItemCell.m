@@ -7,6 +7,7 @@
 //
 
 #import "KoaMentionControlItemCell.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 @implementation KoaMentionControlItemCell
 
@@ -36,6 +37,11 @@
 {
     [self.value setFont:[UIFont fontWithName:@"DroidSans-Bold" size:13]];
     [self.description setFont:[UIFont fontWithName:@"DroidSans-Bold" size:13]];
+}
+
+- (void)setImageCell:(NSString*)urlImage
+{
+    [self.image setImageWithURL:[NSURL URLWithString:urlImage]];
 }
 
 @end

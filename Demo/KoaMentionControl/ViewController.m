@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "KoaMentionControl.h"
+#import "KoaMentionControlItemObject.h"
 
 @interface ViewController ()
 
@@ -37,31 +38,31 @@
 
     //Set items list
     
-    item oneItem1;
+    KoaMentionControlItemObject *oneItem1 = [[KoaMentionControlItemObject alloc] init];
     oneItem1.description = @"All people in project";
     oneItem1.image = @"";
     
-    item oneItem2;
+    KoaMentionControlItemObject * oneItem2 = [[KoaMentionControlItemObject alloc] init];
     oneItem2.description = @"Polina Flegontovna";
     oneItem2.image = @"url";
     
-    item oneItem3;
+    KoaMentionControlItemObject * oneItem3 = [[KoaMentionControlItemObject alloc] init];
     oneItem3.description = @"Marcos Medina";
     oneItem3.image = @"url";
 
-    item oneItem4;
+    KoaMentionControlItemObject * oneItem4 = [[KoaMentionControlItemObject alloc] init];
     oneItem4.description = @"Sergi Gracia";
     oneItem4.image = @"url";
     
-    item oneItem5;
+    KoaMentionControlItemObject * oneItem5 = [[KoaMentionControlItemObject alloc] init];
     oneItem5.description = @"Wa Sabi";
     oneItem5.image = @"url";
 
-    NSMutableDictionary *itemsList = [[NSMutableDictionary alloc] initWithObjectsAndKeys:   [NSValue value:&oneItem1 withObjCType:@encode(item)], @"@all",
-                                                                                            [NSValue value:&oneItem2 withObjCType:@encode(item)], @"@flegontovna",
-                                                                                            [NSValue value:&oneItem3 withObjCType:@encode(item)], @"@marcosmedina",
-                                                                                            [NSValue value:&oneItem4 withObjCType:@encode(item)], @"@sgracia",
-                                                                                            [NSValue value:&oneItem5 withObjCType:@encode(item)], @"@w2a.s-a_bi", nil];
+    NSMutableDictionary *itemsList = [[NSMutableDictionary alloc] initWithObjectsAndKeys:   oneItem1, @"@all",
+                                                                                            oneItem2, @"@flegontovna",
+                                                                                            oneItem3, @"@marcosmedina",
+                                                                                            oneItem4, @"@sgracia",
+                                                                                            oneItem5, @"@w2a.s-a_bi", nil];
     [self.KoaMentionControl setMentionItemsDictionary:itemsList];
 }
 - (void)viewDidAppear:(BOOL)animated
