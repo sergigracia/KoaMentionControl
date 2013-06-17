@@ -254,7 +254,7 @@
     }
     
     [self setIsMentionTableVisible:NO];
-    [self resizeTextView];
+    [self resizeTextViewToOriginalPosition];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -516,11 +516,34 @@
     [self.textView scrollRectToVisible:CGRectMake(cursorPosition.x, cursorPosition.y-20, 10, 40) animated:NO];
     
     [UIView commitAnimations];
+}
+
+- (void)resizeTextViewToOriginalPosition
+{
+    CGPoint cursorPosition = [self.textView caretRectForPosition:self.textView.selectedTextRange.start].origin;
     
-//    NSLog(@"--------");
-//    NSLog(@"Keyboard    frame: %@", NSStringFromCGRect(self.currentKeyboardFrame));
-//    NSLog(@"TextView    frame: %@", NSStringFromCGRect(newTextViewFrame));
-//    NSLog(@"MentionView frame: %@", NSStringFromCGRect(newMentionViewFrame));
+    if (self.isMentionTableVisible) {
+        //Scroll mention table to the top
+        [self.mentionTableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:NO];
+    }
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.2];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    
+    //Set alpha
+    [self.view setAlpha: 1 * self.isMentionTableVisible];
+    
+    //Set mention table view frame
+    CGRect newMentionViewFrame = CGRectMake(0, tableMarginTop, self.parentView.frame.size.width, self.parentView.frame.size.height - self.currentKeyboardFrame.size.height * (self.isKeyboardVisible?1:-1) - tableMarginTop);
+    [self.view setFrame: newMentionViewFrame];
+    
+    [self.textView setFrame:self.originalFrame];
+    
+    //Scroll to the cursor zone
+    [self.textView scrollRectToVisible:CGRectMake(cursorPosition.x, cursorPosition.y-20, 10, 40) animated:NO];
+    
+    [UIView commitAnimations];
 }
 
 @end
